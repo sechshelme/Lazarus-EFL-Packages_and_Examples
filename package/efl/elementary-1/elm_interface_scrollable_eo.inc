@@ -100,6 +100,7 @@ function ELM_INTERFACE_SCROLLABLE_EVENT_CHANGED: PEfl_Event_Description;
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function ELM_INTERFACE_SCROLLABLE_MIXIN: PEfl_Class;
 begin
   ELM_INTERFACE_SCROLLABLE_MIXIN := elm_interface_scrollable_mixin_get;
@@ -109,6 +110,7 @@ function ELM_INTERFACE_SCROLLABLE_EVENT_CHANGED: PEfl_Event_Description;
 begin
   ELM_INTERFACE_SCROLLABLE_EVENT_CHANGED := @(_ELM_INTERFACE_SCROLLABLE_EVENT_CHANGED);
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

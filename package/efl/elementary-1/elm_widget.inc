@@ -100,7 +100,9 @@ procedure _elm_access_widget_item_register(item: PElm_Widget_Item_Data); cdecl; 
 procedure _elm_access_widget_item_unregister(item: PElm_Widget_Item_Data); cdecl; external libelementary;
 procedure _elm_access_on_highlight_hook_set(ac: PElm_Access_Info; func: TElm_Access_On_Highlight_Cb; data: pointer); cdecl; external libelementary;
 procedure _elm_access_activate_callback_set(ac: PElm_Access_Info; func: TElm_Access_Activate_Cb; data: pointer); cdecl; external libelementary;
+{$ifdef EFL_BETA_API_SUPPORT}
 procedure _elm_access_highlight_object_activate(obj: PEvas_Object; act: TEfl_Ui_Activate); cdecl; external libelementary;
+{$endif}
 procedure _elm_access_highlight_cycle(obj: PEvas_Object; dir: TElm_Focus_Direction); cdecl; external libelementary;
 function _elm_access_object_get(obj: PEvas_Object): PElm_Access_Info; cdecl; external libelementary; deprecated;
 
@@ -189,7 +191,9 @@ function elm_widget_name_find(obj: PEvas_Object; name: pchar; recurse: longint):
 function elm_widget_stringlist_get(str: pchar): PEina_List; cdecl; external libelementary;
 procedure elm_widget_stringlist_free(list: PEina_List); cdecl; external libelementary;
 procedure elm_widget_focus_mouse_up_handle(obj: PEvas_Object); cdecl; external libelementary;
+{$ifdef EFL_BETA_API_SUPPORT}
 procedure elm_widget_activate(obj: PEvas_Object; act: TEfl_Ui_Activate); cdecl; external libelementary;
+{$endif}
 procedure elm_widget_part_text_set(obj: PEvas_Object; part: pchar; _label: pchar); cdecl; external libelementary;
 function elm_widget_part_text_get(obj: PEvas_Object; part: pchar): pchar; cdecl; external libelementary;
 function elm_widget_translatable_part_text_get(obj: PEvas_Object; part: pchar): pchar; cdecl; external libelementary;

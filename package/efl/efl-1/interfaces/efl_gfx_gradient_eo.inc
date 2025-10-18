@@ -24,11 +24,12 @@ function efl_gfx_gradient_spread_get(obj: PEo): TEfl_Gfx_Gradient_Spread; cdecl;
 {$IFDEF read_implementation}
 
 
-{ was #define dname def_expr }
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_GFX_GRADIENT_INTERFACE: PEfl_Class;
 begin
   EFL_GFX_GRADIENT_INTERFACE := efl_gfx_gradient_interface_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

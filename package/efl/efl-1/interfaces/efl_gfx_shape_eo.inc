@@ -38,10 +38,12 @@ function efl_gfx_shape_fill_rule_get(obj: PEo): TEfl_Gfx_Fill_Rule; cdecl; exter
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_GFX_SHAPE_MIXIN: PEfl_Class;
 begin
   EFL_GFX_SHAPE_MIXIN := efl_gfx_shape_mixin_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

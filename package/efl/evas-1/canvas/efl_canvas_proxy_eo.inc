@@ -4,6 +4,7 @@
 type
   PEfl_Canvas_Proxy = ^TEfl_Canvas_Proxy;
   TEfl_Canvas_Proxy = TEo;
+
 {$ifdef EFL_BETA_API_SUPPORT}
 function EFL_CANVAS_PROXY_CLASS: PEfl_Class;
 
@@ -25,10 +26,12 @@ function efl_canvas_proxy_source_events_get(obj: PEo): TEina_Bool; cdecl; extern
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_CANVAS_PROXY_CLASS: PEfl_Class;
 begin
   EFL_CANVAS_PROXY_CLASS := efl_canvas_proxy_class_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

@@ -24,11 +24,12 @@ function efl_ui_panes_fixed_get(obj: PEo): TEina_Bool; cdecl; external libelemen
 {$IFDEF read_implementation}
 
 
-{ was #define dname def_expr }
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_PANES_CLASS: PEfl_Class;
 begin
   EFL_UI_PANES_CLASS := efl_ui_panes_class_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

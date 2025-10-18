@@ -48,6 +48,7 @@ function EFL_UI_EVENT_ZOOM_CHANGE: PEfl_Event_Description;
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_ZOOM_INTERFACE: PEfl_Class;
 begin
   EFL_UI_ZOOM_INTERFACE := efl_ui_zoom_interface_get;
@@ -67,6 +68,7 @@ function EFL_UI_EVENT_ZOOM_CHANGE: PEfl_Event_Description;
 begin
   EFL_UI_EVENT_ZOOM_CHANGE := @(_EFL_UI_EVENT_ZOOM_CHANGE);
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

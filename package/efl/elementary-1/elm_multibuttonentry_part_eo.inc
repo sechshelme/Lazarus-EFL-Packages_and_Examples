@@ -20,10 +20,12 @@ function elm_multibuttonentry_part_class_get: PEfl_Class; cdecl; external libele
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function ELM_MULTIBUTTONENTRY_PART_CLASS: PEfl_Class;
 begin
   ELM_MULTIBUTTONENTRY_PART_CLASS := elm_multibuttonentry_part_class_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

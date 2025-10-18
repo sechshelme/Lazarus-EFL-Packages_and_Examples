@@ -25,10 +25,12 @@ function efl_core_env_content_get(obj: PEo): PEina_Iterator; cdecl; external lib
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_CORE_ENV_CLASS: PEfl_Class;
 begin
   EFL_CORE_ENV_CLASS := efl_core_env_class_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

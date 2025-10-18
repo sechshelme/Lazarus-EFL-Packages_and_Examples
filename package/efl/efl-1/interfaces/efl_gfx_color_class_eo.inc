@@ -27,10 +27,12 @@ procedure efl_gfx_color_class_clear(obj: PEo); cdecl; external libefl;
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_GFX_COLOR_CLASS_MIXIN: PEfl_Class;
 begin
   EFL_GFX_COLOR_CLASS_MIXIN := efl_gfx_color_class_mixin_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

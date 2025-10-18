@@ -4,6 +4,7 @@
 type
   PEfl_Ui_Drag = ^TEfl_Ui_Drag;
   TEfl_Ui_Drag = TEo;
+
 {$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_DRAG_INTERFACE: PEfl_Class;
 
@@ -30,10 +31,12 @@ function efl_ui_drag_page_move(obj: PEo; dx: double; dy: double): TEina_Bool; cd
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_DRAG_INTERFACE: PEfl_Class;
 begin
   EFL_UI_DRAG_INTERFACE := efl_ui_drag_interface_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

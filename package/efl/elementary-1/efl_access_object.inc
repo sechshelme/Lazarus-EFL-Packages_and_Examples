@@ -2,6 +2,7 @@
 
 
 procedure efl_access_attributes_list_free(list: PEina_List); cdecl; external libelementary;
+{$ifdef EFL_BETA_API_SUPPORT}
 procedure efl_access_attribute_free(attr: PEfl_Access_Attribute); cdecl; external libelementary;
 
 procedure efl_access_i18n_name_changed_signal_emit(obj : PEfl_Access_Object);
@@ -13,6 +14,7 @@ procedure efl_access_active_descendant_changed_signal_emit(obj:PEfl_Access_Objec
 procedure efl_access_visible_data_changed_signal_emit(obj : PEfl_Access_Object);
 procedure efl_access_added(obj : PEfl_Access_Object);
 procedure efl_access_removed(obj : PEfl_Access_Object);
+{$endif}
 
 // === Konventiert am: 30-5-25 14:00:22 ===
 
@@ -23,6 +25,7 @@ procedure efl_access_removed(obj : PEfl_Access_Object);
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 procedure efl_access_i18n_name_changed_signal_emit(obj: PEfl_Access_Object);
 begin
   efl_access_object_event_emit(obj, EFL_ACCESS_OBJECT_EVENT_PROPERTY_CHANGED, pchar('i18n_name'));
@@ -67,6 +70,7 @@ procedure efl_access_removed(obj: PEfl_Access_Object);
 begin
   efl_access_object_event_emit(obj, EFL_ACCESS_OBJECT_EVENT_REMOVED, nil);
 end;
+{$endif}
 
 
 

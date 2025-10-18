@@ -27,7 +27,6 @@ uses
     win, rect, btn: PEvas_Object;
   begin
     elm_init(argc, argv);
-
     elm_policy_set(ELM_POLICY_QUIT, ELM_POLICY_QUIT_LAST_WINDOW_CLOSED);
 
     win := elm_win_util_standard_add('main', 'Rectangles');

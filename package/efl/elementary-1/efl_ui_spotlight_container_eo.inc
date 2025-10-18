@@ -67,6 +67,7 @@ begin
   EFL_UI_SPOTLIGHT_CONTAINER_CLASS := efl_ui_spotlight_container_class_get;
 end;
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_SPOTLIGHT_EVENT_TRANSITION_START: PEfl_Event_Description;
 begin
   EFL_UI_SPOTLIGHT_EVENT_TRANSITION_START := @(_EFL_UI_SPOTLIGHT_EVENT_TRANSITION_START);
@@ -76,6 +77,7 @@ function EFL_UI_SPOTLIGHT_EVENT_TRANSITION_END: PEfl_Event_Description;
 begin
   EFL_UI_SPOTLIGHT_EVENT_TRANSITION_END := @(_EFL_UI_SPOTLIGHT_EVENT_TRANSITION_END);
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

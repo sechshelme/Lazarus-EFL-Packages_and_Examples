@@ -22,10 +22,12 @@ function efl_ui_draggable_drag_target_get(obj: PEo): TEina_Bool; cdecl; external
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_DRAGGABLE_INTERFACE: PEfl_Class;
 begin
   EFL_UI_DRAGGABLE_INTERFACE := efl_ui_draggable_interface_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

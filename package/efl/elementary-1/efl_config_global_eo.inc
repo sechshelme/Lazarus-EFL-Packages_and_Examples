@@ -28,10 +28,12 @@ procedure efl_config_profile_derived_del(obj: PEo; profile: pchar); cdecl; exter
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_CONFIG_GLOBAL_CLASS: PEfl_Class;
 begin
   EFL_CONFIG_GLOBAL_CLASS := efl_config_global_class_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

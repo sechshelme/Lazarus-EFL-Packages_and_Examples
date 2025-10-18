@@ -76,6 +76,7 @@ function EFL_UI_DND_EVENT_DRAG_FINISHED: PEfl_Event_Description;
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_DND_MIXIN: PEfl_Config;
 begin
   EFL_UI_DND_MIXIN := efl_ui_dnd_mixin_get;
@@ -110,6 +111,7 @@ function EFL_UI_DND_EVENT_DRAG_FINISHED: PEfl_Event_Description;
 begin
   EFL_UI_DND_EVENT_DRAG_FINISHED := @(_EFL_UI_DND_EVENT_DRAG_FINISHED);
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

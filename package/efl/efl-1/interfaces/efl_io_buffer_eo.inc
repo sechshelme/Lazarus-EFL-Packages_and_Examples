@@ -41,6 +41,7 @@ function EFL_IO_BUFFER_EVENT_REALLOCATED: PEfl_Event_Description;
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_IO_BUFFER_CLASS: PEfl_Class;
 begin
   EFL_IO_BUFFER_CLASS := efl_io_buffer_class_get;
@@ -60,6 +61,7 @@ function EFL_IO_BUFFER_EVENT_REALLOCATED: PEfl_Event_Description;
 begin
   EFL_IO_BUFFER_EVENT_REALLOCATED := @(_EFL_IO_BUFFER_EVENT_REALLOCATED);
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

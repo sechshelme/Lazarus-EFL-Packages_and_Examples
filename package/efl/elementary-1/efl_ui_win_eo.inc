@@ -349,12 +349,12 @@ var
 function EFL_UI_WIN_EVENT_WM_ROTATION_CHANGED: PEfl_Event_Description;
 {$endif}
 
+{$ifdef EFL_BETA_API_SUPPORT}
 var
   _EFL_UI_WIN_EVENT_THEME_CHANGED: TEfl_Event_Description; cvar;external libelementary;
 
 function EFL_UI_WIN_EVENT_THEME_CHANGED: PEfl_Event_Description;
 
-{$ifdef EFL_BETA_API_SUPPORT}
 var
   _EFL_UI_WIN_EVENT_ELM_ACTION_BLOCK_MENU: TEfl_Event_Description; cvar;external libelementary;
 
@@ -390,10 +390,12 @@ begin
   EFL_UI_WIN_EVENT_DELETE_REQUEST := @(_EFL_UI_WIN_EVENT_DELETE_REQUEST);
 end;
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_WIN_EVENT_WITHDRAWN: PEfl_Event_Description;
 begin
   EFL_UI_WIN_EVENT_WITHDRAWN := @(_EFL_UI_WIN_EVENT_WITHDRAWN);
 end;
+{$endif}
 
 function EFL_UI_WIN_EVENT_MINIMIZED: PEfl_Event_Description;
 begin
@@ -405,15 +407,19 @@ begin
   EFL_UI_WIN_EVENT_NORMAL := @(_EFL_UI_WIN_EVENT_NORMAL);
 end;
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_WIN_EVENT_STICK: PEfl_Event_Description;
 begin
   EFL_UI_WIN_EVENT_STICK := @(_EFL_UI_WIN_EVENT_STICK);
 end;
+{$endif}
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_WIN_EVENT_UNSTICK: PEfl_Event_Description;
 begin
   EFL_UI_WIN_EVENT_UNSTICK := @(_EFL_UI_WIN_EVENT_UNSTICK);
 end;
+{$endif}
 
 function EFL_UI_WIN_EVENT_FULLSCREEN_CHANGED: PEfl_Event_Description;
 begin
@@ -425,16 +431,19 @@ begin
   EFL_UI_WIN_EVENT_MAXIMIZED_CHANGED := @(_EFL_UI_WIN_EVENT_MAXIMIZED_CHANGED);
 end;
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_WIN_EVENT_INDICATOR_PROP_CHANGED: PEfl_Event_Description;
 begin
   EFL_UI_WIN_EVENT_INDICATOR_PROP_CHANGED := @(_EFL_UI_WIN_EVENT_INDICATOR_PROP_CHANGED);
 end;
+{$endif}
 
 function EFL_UI_WIN_EVENT_WIN_ROTATION_CHANGED: PEfl_Event_Description;
 begin
   EFL_UI_WIN_EVENT_WIN_ROTATION_CHANGED := @(_EFL_UI_WIN_EVENT_WIN_ROTATION_CHANGED);
 end;
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_WIN_EVENT_PROFILE_CHANGED: PEfl_Event_Description;
 begin
   EFL_UI_WIN_EVENT_PROFILE_CHANGED := @(_EFL_UI_WIN_EVENT_PROFILE_CHANGED);
@@ -449,11 +458,14 @@ function EFL_UI_WIN_EVENT_THEME_CHANGED: PEfl_Event_Description;
 begin
   EFL_UI_WIN_EVENT_THEME_CHANGED := @(_EFL_UI_WIN_EVENT_THEME_CHANGED);
 end;
+{$endif}
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_WIN_EVENT_ELM_ACTION_BLOCK_MENU: PEfl_Event_Description;
 begin
   EFL_UI_WIN_EVENT_ELM_ACTION_BLOCK_MENU := @(_EFL_UI_WIN_EVENT_ELM_ACTION_BLOCK_MENU);
 end;
+{$endif}
 
 function EFL_UI_WIN_EVENT_PAUSE: PEfl_Event_Description;
 begin

@@ -27,6 +27,7 @@ function EFL_CONFIG_EVENT_CONFIG_CHANGED: PEfl_Event_Description;
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_CONFIG_INTERFACE: PEfl_Class;
 begin
   EFL_CONFIG_INTERFACE := efl_config_interface_get;
@@ -36,6 +37,7 @@ function EFL_CONFIG_EVENT_CONFIG_CHANGED: PEfl_Event_Description;
 begin
   EFL_CONFIG_EVENT_CONFIG_CHANGED := @(_EFL_CONFIG_EVENT_CONFIG_CHANGED);
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

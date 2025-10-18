@@ -21,10 +21,12 @@ procedure eldbus_model_signal_constructor(obj: PEo; proxy: PEldbus_Proxy; signal
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function ELDBUS_MODEL_SIGNAL_CLASS: PEfl_Class;
 begin
   ELDBUS_MODEL_SIGNAL_CLASS := eldbus_model_signal_class_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

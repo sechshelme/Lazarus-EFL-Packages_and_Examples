@@ -29,10 +29,12 @@ procedure efl_gfx_filter_data_get(obj: PEo; name: pchar; value: PPchar; execute:
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_GFX_FILTER_INTERFACE: PEfl_Class;
 begin
   EFL_GFX_FILTER_INTERFACE := efl_gfx_filter_interface_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

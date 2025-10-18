@@ -320,8 +320,10 @@ function efl_access_object_attributes_get(obj: PEo): PEina_List; cdecl; external
 procedure efl_access_object_attribute_append(obj: PEo; key: pchar; value: pchar); cdecl; external libelementary;
 procedure efl_access_object_attribute_del(obj: PEo; key: pchar); cdecl; external libelementary;
 procedure efl_access_object_attributes_clear(obj: PEo); cdecl; external libelementary;
+{$ifdef EFL_BETA_API_SUPPORT}
 procedure efl_access_object_reading_info_type_set(obj: PEo; reading_info: TEfl_Access_Reading_Info_Type); cdecl; external libelementary;
 function efl_access_object_reading_info_type_get(obj: PEo): TEfl_Access_Reading_Info_Type; cdecl; external libelementary;
+{$endif}
 
 {$ifdef EFL_BETA_API_SUPPORT}
 function efl_access_object_index_in_parent_get(obj: PEo): longint; cdecl; external libelementary;
@@ -411,10 +413,12 @@ function EFL_ACCESS_OBJECT_EVENT_REMOVED: PEfl_Event_Description;
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_ACCESS_OBJECT_MIXIN: PEfl_Class;
 begin
   EFL_ACCESS_OBJECT_MIXIN := efl_access_object_mixin_get;
 end;
+{$endif}
 
 function EFL_ACCESS_OBJECT_EVENT_PROPERTY_CHANGED: PEfl_Event_Description;
 begin

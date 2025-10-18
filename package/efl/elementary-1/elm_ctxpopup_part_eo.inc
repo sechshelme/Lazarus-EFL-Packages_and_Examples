@@ -20,10 +20,12 @@ function elm_ctxpopup_part_class_get: PEfl_Class; cdecl; external libelementary;
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function ELM_CTXPOPUP_PART_CLASS: PEfl_Class;
 begin
   ELM_CTXPOPUP_PART_CLASS := elm_ctxpopup_part_class_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

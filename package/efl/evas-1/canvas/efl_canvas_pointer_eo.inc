@@ -4,7 +4,9 @@ type
   PEfl_Canvas_Pointer = ^TEfl_Canvas_Pointer;
   TEfl_Canvas_Pointer = TEo;
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_CANVAS_POINTER_INTERFACE: PEfl_Class;
+{$endif}
 
 function efl_canvas_pointer_interface_get: PEfl_Class; cdecl; external libevas;
 {$ifdef EFL_BETA_API_SUPPORT}

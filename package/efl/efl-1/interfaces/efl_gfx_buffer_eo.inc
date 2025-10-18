@@ -48,10 +48,12 @@ function efl_gfx_buffer_managed_get(obj: PEo; plane: longint): TEina_Slice; cdec
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_GFX_BUFFER_INTERFACE: PEfl_Class;
 begin
   EFL_GFX_BUFFER_INTERFACE := efl_gfx_buffer_interface_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

@@ -54,10 +54,12 @@ function efl_exe_env_get(obj: PEo): PEfl_Core_Env; cdecl; external libecore;
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_EXE_CLASS: PEfl_Class;
 begin
   EFL_EXE_CLASS := efl_exe_class_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

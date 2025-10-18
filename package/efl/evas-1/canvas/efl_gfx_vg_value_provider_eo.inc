@@ -15,6 +15,7 @@ const
   EFL_GFX_VG_VALUE_PROVIDER_FLAGS_STROKE_WIDTH = 4;
   EFL_GFX_VG_VALUE_PROVIDER_FLAGS_TRANSFORM_MATRIX = 8;
   {$endif}
+
 {$ifdef EFL_BETA_API_SUPPORT}
 function EFL_GFX_VG_VALUE_PROVIDER_CLASS: PEfl_Class;
 
@@ -41,10 +42,12 @@ function efl_gfx_vg_value_provider_updated_get(obj: PEo): TEfl_Gfx_Vg_Value_Prov
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_GFX_VG_VALUE_PROVIDER_CLASS: PEfl_Class;
 begin
   EFL_GFX_VG_VALUE_PROVIDER_CLASS := efl_gfx_vg_value_provider_class_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

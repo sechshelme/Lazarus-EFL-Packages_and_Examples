@@ -20,10 +20,12 @@ function efl_ui_flip_part_class_get: PEfl_Class; cdecl; external libelementary;
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_FLIP_PART_CLASS: PEfl_Class;
 begin
   EFL_UI_FLIP_PART_CLASS := efl_ui_flip_part_class_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

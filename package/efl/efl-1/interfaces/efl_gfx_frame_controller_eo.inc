@@ -40,10 +40,12 @@ function efl_gfx_frame_controller_sector_get(obj: PEo; name: pchar; startframe: 
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_GFX_FRAME_CONTROLLER_INTERFACE: PEfl_Class;
 begin
   EFL_GFX_FRAME_CONTROLLER_INTERFACE := efl_gfx_frame_controller_interface_get;
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}

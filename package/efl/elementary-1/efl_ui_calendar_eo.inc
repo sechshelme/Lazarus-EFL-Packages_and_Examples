@@ -49,6 +49,7 @@ function EFL_UI_CALENDAR_EVENT_CHANGED: PEfl_Event_Description;
 {$IFDEF read_implementation}
 
 
+{$ifdef EFL_BETA_API_SUPPORT}
 function EFL_UI_CALENDAR_CLASS: PEfl_Class;
 begin
   EFL_UI_CALENDAR_CLASS := efl_ui_calendar_class_get;
@@ -58,6 +59,7 @@ function EFL_UI_CALENDAR_EVENT_CHANGED: PEfl_Event_Description;
 begin
   EFL_UI_CALENDAR_EVENT_CHANGED := @(_EFL_UI_CALENDAR_EVENT_CHANGED);
 end;
+{$endif}
 
 
 {$ENDIF read_implementation}
