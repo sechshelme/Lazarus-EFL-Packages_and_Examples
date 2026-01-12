@@ -3,14 +3,6 @@ program project1;
 //{$define EFL_BETA_API_SUPPORT}
 
 
-// pcregrep -Mn 'static inline.*\n(.+\n)?\s*{' *.h
-// pcregrep -Mn 'static inline.*\n(.+\n){0,2}\s*{' *.h  ??????????
-// https://www.perplexity.ai/search/ich-will-die-mit-grep-dateien-aw7Pr2mpROKi9qznTFxhUQ
-// rename 's/\.eo/_eo/' *.h
-
-// array of const !!
-
-
 uses
   efl,
   fp_eina,
@@ -20,8 +12,6 @@ uses
   fp_ecore,
   fp_ecore_evas,
   fp_elementary;
-
-
 
 
   procedure on_win_del(data: pointer; obj: PEvas_Object; event_info: pointer); cdecl;
@@ -125,8 +115,7 @@ uses
     elm_box_pack_end(box, entry);
     evas_object_show(entry);
 
-    radioBox := createRadioBox(box);
-
+   radioBox := createRadioBox(box);
 
     evas_object_resize(win, 240, 120);
     evas_object_show(win);

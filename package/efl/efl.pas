@@ -57,8 +57,8 @@ const
   libethumb = 'libethumb-1.dll';
   libecore = 'libecore-1.dll';
   libecore_file = 'libecore_file-1.dll';
-  libecore_evas = 'libecore_evas-1.dll';
-  libencore_con = 'libecore_con-1.dll';
+  libecore_eva = 'libecore_evas-1.dll';
+  libecore_con = 'libecore_con-1.dll';
   libecore_ipc = 'libecore_ipc-1.dll';
   libecore_audio = 'libecore_audio-1.dll';
   libecore_x = 'libecore_x-1.dll';

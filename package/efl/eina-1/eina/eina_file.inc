@@ -37,7 +37,8 @@ const
 const
   EINA_PATH_MAX = 8192;
   {$ifdef mswindows}
-  EINA_PATH_SEP_C = '\\';
+//  EINA_PATH_SEP_C = '\\';
+  EINA_PATH_SEP_C = '\';
   EINA_PATH_SEP_S = '\\';
   {$else}
   EINA_PATH_SEP_C = '/';

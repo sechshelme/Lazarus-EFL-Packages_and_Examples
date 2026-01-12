@@ -260,7 +260,7 @@ var
 begin
   v := eina_value_new(EINA_VALUE_TYPE_DOUBLE);
   if v <> nil then begin
-    eina_value_set(v, Pointer(c));
+//    eina_value_set(v, Pointer(c));
   end; // Pass value as Pointer
   Result := v;
 end;
@@ -424,7 +424,7 @@ begin
   FillChar(Result, SizeOf(TEina_Value), 0);
 
   if eina_value_setup(@Result, EINA_VALUE_TYPE_DOUBLE) then begin
-    eina_value_set(@Result, Pointer(c));
+//    eina_value_set(@Result, Pointer(c));
   end;
 end;
 
